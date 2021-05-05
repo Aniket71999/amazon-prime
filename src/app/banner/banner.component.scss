@@ -1,0 +1,53 @@
+.slidercontainer {
+  background: #0c0f12;
+  padding-top: 50px;
+  .slides_content {
+    height: 307px;
+    &__block {
+      height: 100%;
+    }
+  }
+}
+:host ::ng-deep .slick-dots {
+  bottom: 3px;
+}
+:host ::ng-deep .slick-slider {
+  margin-bottom: 0px;
+}
+
+:host ::ng-deep .slick-prev {
+  z-index: 2;
+  opacity: 0.9;
+  left: 1px;
+  border-radius: 35px;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  &::before {
+    content: "<" !important;
+    align-items: center;
+    color: white;
+    font-size: 29px;
+    font-weight: 600;
+    line-height: 0.1;
+    opacity: 1;
+  }
+}
+:host ::ng-deep .slick-next {
+  z-index: 2;
+  opacity: 0.9;
+  right: 1px;
+  border-radius: 35px;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  &::before {
+    content: ">" !important;
+    align-items: center;
+    color: white;
+    font-size: 29px;
+    font-weight: 600;
+    line-height: 0.1;
+    opacity: 1;
+  }
+}

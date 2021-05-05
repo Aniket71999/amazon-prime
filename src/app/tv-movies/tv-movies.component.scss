@@ -1,0 +1,120 @@
+.tv_movies {
+  padding: 20px 0 2px 32px;
+  background: #0f171e;
+  &__label {
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+}
+.slider_container {
+  background: #0f171e;
+  width: 100%;
+  overflow: auto;
+  display: -webkit-inline-box;
+  &::-webkit-scrollbar {
+    height: 6px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+      border-radius: 10px;
+    }
+  }
+
+  .slides_content {
+    margin: 0 4px;
+    width: 30%;
+    &__block {
+      width: 100%;
+      border-radius: 3px;
+    }
+  }
+}
+
+// .slidercontainer {
+//   background: #0f171e;
+//   padding-bottom: 2%;
+//   .slick-slide {
+//     margin-right: 14px;
+//     // width: 179px !important;
+//     .slides_content {
+//       &__block {
+//         border-radius: 2px;
+//       }
+//     }
+//   }
+// }
+// :host ::ng-deep .slick-dots {
+//   bottom: 3px;
+// }
+// :host ::ng-deep .slick-slider {
+//   margin-bottom: 0px;
+// }
+// :host ::ng-deep .slick-list {
+//   padding: 0 5% 0 0;
+//   background: #0f171e;
+//   // margin: 0 0 0 5%;
+//   @media only screen and (max-width: 768px) {
+//     padding: 0 26% 0 0;
+//   }
+// }
+
+// // :host ::ng-deep [data-slick-index="0"] {
+// //   .slides_content {
+// //     margin-left: 20%;
+// //     height: 100px;
+// //     &__block {
+// //       height: 100%;
+// //       border-radius: 5px;
+// //     }
+// //   }
+// // }
+// :host ::ng-deep .slick-prev {
+//   z-index: 2;
+//   opacity: 0.9;
+//   left: 1px;
+//   border-radius: 35px;
+//   top: 50%;
+//   height: 40px;
+//   width: 40px;
+//   &::before {
+//     content: "<" !important;
+//     align-items: center;
+//     color: white;
+//     font-size: 29px;
+//     font-weight: 600;
+//     line-height: 0.1;
+//     opacity: 1;
+//   }
+// }
+// :host ::ng-deep .slick-next {
+//   z-index: 2;
+//   opacity: 0.9;
+//   right: 1px;
+//   border-radius: 35px;
+//   top: 50%;
+//   height: 40px;
+//   width: 40px;
+//   &::before {
+//     content: ">" !important;
+//     align-items: center;
+//     color: white;
+//     font-size: 29px;
+//     font-weight: 600;
+//     line-height: 0.1;
+//     opacity: 1;
+//   }
+// }
