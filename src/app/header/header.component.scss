@@ -2,36 +2,51 @@
 .header {
   position: fixed;
   z-index: 1;
-  width: 100%;
+  width: $width-full;
   .header_container {
-    display: flex;
-    justify-content: space-between;
-    background: #1b252f;
+    @include flex-space-between();
+    background: $color_background_header;
     padding: 8px 40px 8px 30px;
-    // position: fixed;
-    //   z-index: 1;
     .header_wrapper {
-      display: flex;
-      align-items: center;
+      @include flex-item-center();
       .header_logo {
         height: 33px;
         width: 77px;
         margin-right: 8px;
         &__block {
-          width: 100%;
-          height: 100%;
+          @include block();
         }
       }
       .navigation {
         display: flex;
-        color: #dde0e3;
+        color: $color_nav;
         &__nav_list {
           font-size: 11px;
           margin: 0 5px;
         }
         &__nav_list:hover {
-          color: white;
-          // font-weight: 600;
+          color: $white;
+        }
+        @media only screen and (max-width: $mobile) {
+          display: none;
+        }
+      }
+      .browse {
+        @media only screen and (min-width: $mobile) {
+          display: none;
+        }
+        @media only screen and (max-width: $mobile) {
+          color: $color_nav;
+          @include flex-item-center();
+          &__label {
+            font-size: 10px;
+            margin-right: 5px;
+          }
+          &__label:hover {
+            color: $white;
+          }
+          &__dropdown {
+          }
         }
       }
     }
@@ -39,10 +54,9 @@
       display: flex;
       .search_bar {
         margin: auto 8px auto 0;
-        display: flex;
-        align-items: center;
+        @include flex-item-center();
         padding: 3.5px 3px;
-        border: 1px solid #4d5d68;
+        border: 1px solid $color_search_border;
         &__logo {
           width: 15px;
           margin-right: 6px;
@@ -51,7 +65,7 @@
         .search_field {
           outline: none;
           border: none;
-          background: #1b252f;
+          background: $color_search_background;
           color: $white;
           font-size: 11.5px;
         }
@@ -60,31 +74,29 @@
         }
       }
       .search_bar:hover {
-        border-color: #c9d1d8;
+        border-color: $search_border_hover;
         cursor: pointer;
       }
       .profile {
-        display: flex;
-        align-items: center;
+        @include flex-item-center();
         &__image {
           width: 30px;
           height: 27px;
           margin-right: 4px;
           &__block {
-            width: 100%;
-            height: 100%;
+            @include block();
           }
         }
         &__image:hover + div {
-          color: white;
+          color: $white;
           cursor: pointer;
         }
         &__username {
-          color: #dde0e3;
+          color: $color_header_username;
           font-size: 10px;
         }
         &__username:hover {
-          color: white;
+          color: $header_username_hover;
           cursor: pointer;
         }
       }

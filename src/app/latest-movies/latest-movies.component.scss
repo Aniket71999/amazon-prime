@@ -1,18 +1,23 @@
+@import "/src/assets/sass/main.scss";
 .tv_movies {
   padding: 20px 0 2px 32px;
-  background: #0f171e;
+  background: $reels_background;
   &__label {
-    color: white;
+    color: $white;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: $font-weight-medium;
     margin-bottom: 6px;
+    @media only screen and (max-width: $mobile_small) {
+      font-size: 10px;
+    }
   }
 }
 .slider_container {
-  background: #0f171e;
-  width: 100%;
+  background: $reels_background;
+  width: $width-full;
   overflow: auto;
-  display: -webkit-inline-box;
+  display: flex;
+  direction: rtl;
   &::-webkit-scrollbar {
     height: 6px;
     &:hover {
@@ -34,11 +39,15 @@
   }
 
   .slides_content {
-    margin: 0 4px;
-    width: 30%;
+    display: flex;
+    width: $width-full;
     &__block {
-      width: 100%;
+      width: 23%;
       border-radius: 3px;
+      margin: 0 4px;
+      @media only screen and (max-width: $mobile) {
+        width: 36%;
+      }
     }
   }
 }

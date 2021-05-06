@@ -16,7 +16,6 @@ export class BannerComponent implements OnInit {
     { img: '../../assets/jpeg/bannerimage3.jpeg' },
     { img: '../../assets/jpeg/bannerimage4.jpeg' },
   ];
-
   slideConfig = {
     slidesToShow: 1,
     dots: true,

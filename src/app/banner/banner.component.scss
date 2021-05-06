@@ -1,10 +1,12 @@
+@import "/src/assets/sass/main.scss";
+
 .slidercontainer {
-  background: #0c0f12;
-  padding-top: 50px;
+  background: $color_banner_background;
+  padding-top: 49px;
   .slides_content {
-    height: 307px;
+    height: $height-full;
     &__block {
-      height: 100%;
+      height: $height-full;
     }
   }
 }
@@ -26,9 +28,9 @@
   &::before {
     content: "<" !important;
     align-items: center;
-    color: white;
+    color: $white;
     font-size: 29px;
-    font-weight: 600;
+    font-weight: $font-weight-medium;
     line-height: 0.1;
     opacity: 1;
   }
@@ -44,9 +46,9 @@
   &::before {
     content: ">" !important;
     align-items: center;
-    color: white;
+    color: $white;
     font-size: 29px;
-    font-weight: 600;
+    font-weight: $font-weight-medium;
     line-height: 0.1;
     opacity: 1;
   }
